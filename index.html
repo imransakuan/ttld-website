@@ -1,9 +1,6 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,8 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,44 +18,54 @@
     <nav>
 
         <div class="logo">
-            TTLD
+            <h1>TTLD</h1>
+            <p>THE TORTURED<br>LIFTERS<br>DEPARTMENT</p>
         </div>
 
         <ul>
-
-            <li><a href="">Home</a></li>
-            <li><a href="">Memberships</a></li>
-            <li><a href="">Trainers</a></li>
-            <li><a href="">Walk-In</a></li>
-            <li><a href="">Contact</a></li>
-
+            <li><a href="#">HOME</a></li>
+            <li><a href="#memberships">MEMBERSHIPS</a></li>
+            <li><a href="#trainers">TRAINERS</a></li>
+            <li><a href="#walkin">WALK-IN</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
 
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
 
     <section class="hero">
 
-        <h1>
-            THE TORTURED <br>
-            LIFTERS <br>
-            DEPARTMENT
-        </h1>
+        <div class="overlay"></div>
 
-        <p class="tagline">
-            All's fair in love and metals.
-        </p>
+        <div class="hero-content">
 
-        <button>
-            JOIN THE DEPARTMENT
-        </button>
+            <p class="welcome">WELCOME TO</p>
+
+            <h1>
+                THE TORTURED<br>
+                LIFTERS<br>
+                DEPARTMENT
+            </h1>
+
+            <p class="tagline">
+                All's fair in love and metals.
+            </p>
+
+            <button onclick="joinNow()">
+                JOIN THE DEPARTMENT
+            </button>
+
+        </div>
 
     </section>
 
     <!-- MEMBERSHIPS -->
 
-    <section class="memberships">
+    <section class="memberships" id="memberships">
+
+        <p class="section-small">MEMBERSHIPS</p>
 
         <h2>CHOOSE YOUR PATH</h2>
 
@@ -69,16 +75,19 @@
 
                 <h3>THE POET</h3>
 
-                <p class="price">RM89</p>
+                <div class="icon">✒</div>
 
-                <p>/ month</p>
+                <h1>RM89</h1>
+
+                <p class="month">/ month</p>
+
+                <hr>
 
                 <ul>
-
-                    <li>Gym Access</li>
-                    <li>Locker Room</li>
-                    <li>Open Gym</li>
-
+                    <li>✓ Gym Access</li>
+                    <li>✓ Locker Room</li>
+                    <li>✓ Basic Equipment</li>
+                    <li>✓ Open Gym</li>
                 </ul>
 
                 <button>CHOOSE PLAN</button>
@@ -89,17 +98,20 @@
 
                 <h3>THE TORTURED</h3>
 
-                <p class="price">RM149</p>
+                <div class="icon">🥀</div>
 
-                <p>/ month</p>
+                <h1>RM149</h1>
+
+                <p class="month">/ month</p>
+
+                <hr>
 
                 <ul>
-
-                    <li>Gym Access</li>
-                    <li>Group Classes</li>
-                    <li>Locker Room</li>
-                    <li>Open Gym</li>
-
+                    <li>✓ Gym Access</li>
+                    <li>✓ Group Classes</li>
+                    <li>✓ Locker Room</li>
+                    <li>✓ Basic Equipment</li>
+                    <li>✓ Open Gym</li>
                 </ul>
 
                 <button>CHOOSE PLAN</button>
@@ -110,16 +122,20 @@
 
                 <h3>THE CHAIRMAN</h3>
 
-                <p class="price">RM249</p>
+                <div class="icon">♛</div>
 
-                <p>/ month</p>
+                <h1>RM249</h1>
+
+                <p class="month">/ month</p>
+
+                <hr>
 
                 <ul>
-
-                    <li>All Tortured Benefits</li>
-                    <li>PT Consultation</li>
-                    <li>Priority Access</li>
-
+                    <li>✓ All Tortured Benefits</li>
+                    <li>✓ Personal Training Consultation</li>
+                    <li>✓ Priority Bookings</li>
+                    <li>✓ Premium Locker</li>
+                    <li>✓ Nutrition Guidance</li>
                 </ul>
 
                 <button>CHOOSE PLAN</button>
@@ -130,85 +146,80 @@
 
     </section>
 
-    <!-- TRAINERS -->
+    <!-- WALK IN + TRAINERS -->
 
-    <section class="trainers">
+    <section class="dark-section">
 
-        <h2>OUR PERSONAL TRAINERS</h2>
+        <!-- WALK IN -->
 
-        <div class="trainer-cards">
+        <div class="walkin" id="walkin">
 
-            <div class="trainer">
+            <p class="section-small">NO COMMITMENTS?</p>
 
-                <img src="https://images.unsplash.com/photo-1567013127542-490d757e6349?q=80&w=800&auto=format&fit=crop">
+            <h2>WALK-IN</h2>
 
-                <h3>Waylen Imran</h3>
+            <h1>RM18</h1>
 
-                <p>Chairman of The Tortured Lifters Department</p>
+            <p class="month">/ day</p>
 
-            </div>
+            <hr>
 
-            <div class="trainer">
+            <p class="walk-text">
+                Walk in. Lift hard.<br>
+                Leave stronger.
+            </p>
 
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop">
-
-                <h3>Aiman</h3>
-
-                <p>Fat Loss & Conditioning</p>
-
-            </div>
-
-            <div class="trainer">
-
-                <img src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?q=80&w=800&auto=format&fit=crop">
-
-                <h3>Daniel</h3>
-
-                <p>Powerlifting & Strength</p>
-
-            </div>
+            <button>WALK IN TODAY</button>
 
         </div>
 
-    </section>
+        <!-- TRAINERS -->
 
-    <!-- CONTACT -->
+        <div class="trainers" id="trainers">
 
-    <section class="contact">
-
-        <div class="contact-box">
-
-            <h2>CONTACT THE DEPARTMENT</h2>
-
-            <p class="quote">
-                All's fair in love and metals.
+            <p class="section-small">
+                OUR PERSONAL TRAINERS
             </p>
 
-            <div class="info">
+            <div class="trainer-cards">
 
-                <p>
-                    <strong>Chairman:</strong>
-                    Waylen Imran
-                </p>
+                <div class="trainer">
 
-                <p>
-                    <strong>Phone:</strong>
-                    +60 10-359 8193
-                </p>
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop">
 
-                <p>
-                    <strong>Email:</strong>
-                    contact@ttldgymnasium.com
-                </p>
+                    <h3>WAYLEN IMRAN</h3>
 
-                <p>
-                    <strong>Location:</strong>
-                    Bukit Sentosa,
-                    48300 Rawang,
-                    Selangor
-                </p>
+                    <p>CHAIRMAN</p>
+
+                    <span>Strength & Physique</span>
+
+                </div>
+
+                <div class="trainer">
+
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop">
+
+                    <h3>AIMAN</h3>
+
+                    <p>Fat Loss & Conditioning</p>
+
+                </div>
+
+                <div class="trainer">
+
+                    <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=800&auto=format&fit=crop">
+
+                    <h3>DANIEL</h3>
+
+                    <p>Powerlifting & Strength</p>
+
+                </div>
 
             </div>
+
+            <button class="team-btn">
+                MEET THE TEAM
+            </button>
 
         </div>
 
@@ -216,17 +227,77 @@
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer id="contact">
 
-        <p>
-            THE TORTURED LIFTERS DEPARTMENT™
-        </p>
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <h2>
+                    THE<br>
+                    TORTURED<br>
+                    LIFTERS<br>
+                    DEPARTMENT
+                </h2>
+
+                <p>
+                    All's fair in love and metals.
+                </p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>LOCATION</h3>
+
+                <p>
+                    Bukit Sentosa,<br>
+                    48300 Rawang,<br>
+                    Selangor.
+                </p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>CONTACT THE DEPARTMENT</h3>
+
+                <p>
+                    👤 Waylen<br>
+                    Chairman of The Tortured Lifters Department
+                </p>
+
+                <p>📞 +60 10-359 8193</p>
+
+                <p>✉ contact@ttldgymnasium.com</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>HOURS</h3>
+
+                <p>
+                    Monday - Friday<br>
+                    6:00 AM – 11:00 PM
+                </p>
+
+                <p>
+                    Saturday - Sunday<br>
+                    8:00 AM – 10:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2024 The Tortured Lifters Department.
+        </div>
 
     </footer>
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
-```

@@ -1,1 +1,3 @@
-console.log("TTLD website loaded 😎")
+function joinNow() {
+    alert("Welcome to The Tortured Lifters Department 🥀");
+}
