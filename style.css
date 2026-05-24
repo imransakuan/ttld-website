@@ -9,9 +9,10 @@ html{
 }
 
 body{
-    background:#0d0d0d;
-    color:#f1e7dc;
+    background:#0a0a0a;
+    color:#f3e7da;
     font-family:'Inter', sans-serif;
+    overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -25,46 +26,51 @@ nav{
     justify-content:space-between;
     align-items:center;
 
-    padding:25px 60px;
+    padding:20px 40px;
 
     background:rgba(0,0,0,0.55);
-    backdrop-filter:blur(8px);
 
-    z-index:1000;
+    backdrop-filter:blur(10px);
+
+    z-index:999;
 }
 
 .logo h1{
     font-family:'Cormorant Garamond', serif;
-    font-size:48px;
-    letter-spacing:10px;
+
+    font-size:52px;
     font-weight:400;
+
+    letter-spacing:12px;
 }
 
 .logo p{
-    font-size:9px;
+    font-size:11px;
     letter-spacing:3px;
-    line-height:1.6;
-    margin-top:5px;
+
+    margin-top:6px;
 }
 
 nav ul{
     display:flex;
-    gap:45px;
+    gap:35px;
+
     list-style:none;
 }
 
 nav a{
-    text-decoration:none;
-    color:#f1e7dc;
+    color:#f3e7da;
 
-    font-size:13px;
+    text-decoration:none;
+
+    font-size:12px;
     letter-spacing:3px;
 
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#d9c5af;
+    color:#d4bfa8;
 }
 
 /* HERO */
@@ -73,8 +79,8 @@ nav a:hover{
     height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
-    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop");
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop");
 
     background-size:cover;
     background-position:center;
@@ -88,77 +94,67 @@ nav a:hover{
     padding:20px;
 }
 
-.hero-content{
-    max-width:1000px;
-}
-
-.welcome{
-    letter-spacing:10px;
-    font-size:14px;
-
-    margin-bottom:30px;
-}
-
-.hero h1{
+.hero-content h1{
     font-family:'Cormorant Garamond', serif;
 
-    font-size:110px;
-    line-height:0.95;
-    font-weight:300;
+    font-size:100px;
+    font-weight:400;
 
-    letter-spacing:3px;
+    line-height:1;
 
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
 .tagline{
     font-family:'Cormorant Garamond', serif;
 
-    font-size:42px;
     font-style:italic;
 
-    margin-bottom:40px;
+    font-size:38px;
 
-    color:#e3d5c7;
+    margin-bottom:40px;
 }
 
 button{
-    padding:18px 45px;
+    background:#e6d8ca;
 
-    background:#e5d7c8;
     color:#111;
 
     border:none;
 
-    letter-spacing:4px;
+    padding:18px 45px;
+
+    letter-spacing:5px;
+
     font-size:12px;
 
     cursor:pointer;
 
-    transition:0.3s;
+    transition:0.4s;
 }
 
 button:hover{
+    transform:translateY(-4px);
     background:#fff;
 }
 
-/* MEMBERSHIP */
+/* MEMBERSHIPS */
 
 .memberships{
-    background:#ebe1d6;
+    background:#eee3d7;
 
     color:#111;
 
-    padding:120px 60px;
+    padding:110px 30px;
 
     text-align:center;
 }
 
 .section-small{
-    letter-spacing:7px;
+    letter-spacing:6px;
     font-size:12px;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 .memberships h2{
@@ -167,7 +163,7 @@ button:hover{
     font-size:70px;
     font-weight:400;
 
-    margin-bottom:70px;
+    margin-bottom:60px;
 }
 
 .cards{
@@ -179,155 +175,174 @@ button:hover{
 }
 
 .card{
-    width:330px;
+    width:320px;
 
-    background:#f5eee6;
+    background:#f7efe7;
 
     padding:50px 35px;
 
     border:1px solid rgba(0,0,0,0.1);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.featured{
+    background:#050505;
+    color:#f3e7da;
 }
 
 .card h3{
     font-family:'Cormorant Garamond', serif;
 
-    font-size:40px;
+    font-size:42px;
     font-weight:400;
 
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.icon{
-    font-size:30px;
+.student{
     margin-bottom:20px;
 }
 
 .card h1{
     font-family:'Cormorant Garamond', serif;
-    font-size:70px;
+
+    font-size:65px;
     font-weight:400;
 }
 
 .month{
-    margin-bottom:25px;
+    margin-bottom:20px;
     font-style:italic;
 }
 
 .card hr{
-    margin:30px 0;
+    margin:25px 0;
+
     border:none;
-    border-top:1px solid rgba(0,0,0,0.15);
+
+    border-top:1px solid rgba(0,0,0,0.1);
+}
+
+.featured hr{
+    border-top:1px solid rgba(255,255,255,0.1);
 }
 
 .card ul{
     list-style:none;
     line-height:2;
-    margin-bottom:35px;
+
+    margin-bottom:30px;
 }
 
-.featured{
-    background:#0d0d0d;
-    color:#f1e7dc;
-}
+/* LOWER */
 
-/* DARK SECTION */
-
-.dark-section{
+.lower-section{
     display:grid;
-    grid-template-columns:1fr 2fr;
-
-    background:#0d0d0d;
+    grid-template-columns:1fr 1fr;
 }
 
 /* WALK IN */
 
 .walkin{
-    padding:90px 50px;
-
     background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
     url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop");
 
     background-size:cover;
     background-position:center;
+
+    padding:90px 40px;
 
     text-align:center;
 }
 
 .walkin h2{
     font-family:'Cormorant Garamond', serif;
-    font-size:70px;
+
+    font-size:72px;
     font-weight:400;
 }
 
 .walkin h1{
     font-family:'Cormorant Garamond', serif;
+
     font-size:65px;
     font-weight:400;
 
-    margin-top:15px;
+    margin-top:10px;
 }
 
 .walkin hr{
-    margin:30px auto;
     width:120px;
 
+    margin:30px auto;
+
     border:none;
-    border-top:1px solid rgba(255,255,255,0.2);
+
+    border-top:1px solid rgba(255,255,255,0.15);
 }
 
 .walk-text{
     line-height:1.8;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-style:italic;
+
+    font-size:28px;
+
     margin-bottom:40px;
 }
 
 /* TRAINERS */
 
 .trainers{
-    padding:90px 50px;
+    background:#050505;
+
+    padding:90px 40px;
+
     text-align:center;
 }
 
-.trainer-cards{
+.trainer-grid{
     display:flex;
     justify-content:center;
-    gap:25px;
+    gap:40px;
 
     flex-wrap:wrap;
 
-    margin-top:30px;
+    margin-top:40px;
 }
 
-.trainer{
+.trainer-box{
     width:220px;
 }
 
-.trainer img{
-    width:100%;
-    height:280px;
+.trainer-icon{
+    font-size:70px;
 
-    object-fit:cover;
+    margin-bottom:20px;
 
-    filter:grayscale(100%);
+    transition:0.4s;
 }
 
-.trainer h3{
+.trainer-box:hover .trainer-icon{
+    transform:scale(1.2);
+    color:#d4bfa8;
+}
+
+.trainer-box h3{
     font-family:'Cormorant Garamond', serif;
 
-    margin-top:20px;
-    font-size:34px;
+    font-size:40px;
     font-weight:400;
-}
 
-.trainer p{
-    margin-top:10px;
-    color:#d3c5b7;
-}
-
-.trainer span{
-    display:block;
-    margin-top:8px;
-    font-size:14px;
+    margin-bottom:10px;
 }
 
 .team-btn{
@@ -337,9 +352,9 @@ button:hover{
 /* FOOTER */
 
 footer{
-    background:#111;
+    background:#0a0a0a;
 
-    padding:80px 60px 30px;
+    padding:80px 40px 30px;
 }
 
 .footer-grid{
@@ -352,30 +367,47 @@ footer{
 .footer-brand h2{
     font-family:'Cormorant Garamond', serif;
 
-    font-size:58px;
+    font-size:60px;
     font-weight:400;
 
-    line-height:1.1;
+    line-height:1;
 }
 
 .footer-brand p{
     margin-top:20px;
 
     font-style:italic;
-
-    color:#d4c3b1;
 }
 
 .footer-box h3{
-    letter-spacing:4px;
-    font-size:14px;
+    letter-spacing:5px;
 
-    margin-bottom:25px;
+    font-size:13px;
+
+    margin-bottom:20px;
 }
 
 .footer-box p{
-    line-height:1.9;
-    color:#d8cdc1;
+    line-height:2;
+}
+
+.socials{
+    margin-top:20px;
+
+    display:flex;
+    gap:20px;
+}
+
+.socials a{
+    color:#f3e7da;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.socials a:hover{
+    color:#d4bfa8;
 }
 
 .copyright{
@@ -385,7 +417,27 @@ footer{
 
     font-size:13px;
 
-    color:#a89b8e;
+    color:#b9aa9a;
+}
+
+/* ANIMATION */
+
+.fade-up{
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 /* MOBILE */
@@ -403,26 +455,22 @@ footer{
         flex-wrap:wrap;
         justify-content:center;
 
-        gap:20px;
+        gap:18px;
     }
 
-    .hero h1{
-        font-size:55px;
+    .hero-content h1{
+        font-size:50px;
     }
 
     .tagline{
-        font-size:26px;
-    }
-
-    .memberships{
-        padding:80px 20px;
+        font-size:28px;
     }
 
     .memberships h2{
-        font-size:45px;
+        font-size:42px;
     }
 
-    .dark-section{
+    .lower-section{
         grid-template-columns:1fr;
     }
 
@@ -430,27 +478,26 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .footer-brand h2{
-        font-size:42px;
-    }
-
-    .trainer{
-        width:100%;
-        max-width:300px;
-    }
-
     .card{
         width:100%;
         max-width:340px;
     }
 
-    .walkin,
-    .trainers{
-        padding:70px 25px;
+    .trainer-box{
+        width:100%;
+    }
+
+    .footer-brand h2{
+        font-size:45px;
+    }
+
+    .walk-text{
+        font-size:22px;
     }
 
     button{
         width:100%;
         max-width:320px;
     }
+
 }
