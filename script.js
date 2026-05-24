@@ -1,23 +1,23 @@
+/* SPOTIFY POPUP */
+
 window.onload = function(){
 
-    setTimeout(function(){
+    setTimeout(() => {
 
-        let openSpotify = confirm(
+        const userChoice = confirm(
             "🪶 Listen to Chairman's gym music on Spotify?"
         );
 
-        if(openSpotify){
+        if(userChoice){
 
-            window.open(
-                "https://open.spotify.com/album/1Mo4aZ8pdj6L1jx8zSwJnt",
-                "_blank"
-            );
+            window.location.href =
+            "https://open.spotify.com/album/1Mo4aZ8pdj6L1jx8zSwJnt";
 
         }
 
-    }, 1500);
+    }, 1200);
 
-}
+};
 
 /* JOIN BUTTON */
 
@@ -29,36 +29,7 @@ function joinDepartment(){
 
 }
 
-/* SMOOTH FADE ANIMATION ON SCROLL */
-
-const fadeElements = document.querySelectorAll(
-    ".fade-up"
-);
-
-window.addEventListener("scroll", () => {
-
-    fadeElements.forEach((element) => {
-
-        const position =
-            element.getBoundingClientRect().top;
-
-        const screenPosition =
-            window.innerHeight / 1.2;
-
-        if(position < screenPosition){
-
-            element.style.opacity = "1";
-
-            element.style.transform =
-                "translateY(0px)";
-
-        }
-
-    });
-
-});
-
-/* NAVBAR SHADOW ON SCROLL */
+/* NAVBAR EFFECT */
 
 window.addEventListener("scroll", function(){
 
@@ -67,21 +38,54 @@ window.addEventListener("scroll", function(){
     if(window.scrollY > 50){
 
         nav.style.background =
-            "rgba(0,0,0,0.85)";
+        "rgba(0,0,0,0.92)";
 
         nav.style.boxShadow =
-            "0 5px 20px rgba(0,0,0,0.5)";
+        "0 10px 30px rgba(0,0,0,0.45)";
 
     }
 
     else{
 
         nav.style.background =
-            "rgba(0,0,0,0.55)";
+        "rgba(0,0,0,0.55)";
 
         nav.style.boxShadow =
-            "none";
+        "none";
 
     }
+
+});
+
+/* FADE UP */
+
+const fadeElements =
+document.querySelectorAll(".fade-up");
+
+const observer = new IntersectionObserver(
+
+(entries) => {
+
+    entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},
+
+{
+    threshold:0.15
+}
+
+);
+
+fadeElements.forEach((element) => {
+
+    observer.observe(element);
 
 });
