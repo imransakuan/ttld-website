@@ -1,1 +1,0 @@
-console.log("TTLD website loaded 😎")
